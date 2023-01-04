@@ -6,6 +6,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     public static void task1() {
@@ -66,5 +67,23 @@ public class Main {
             finalString = finalString + lastString;
         }
             System.out.println(finalString);
+        System.out.println();
+    }
+
+    public static void task4() {
+        System.out.println("Задание 4");
+        String abc = "aabccddefgghiijjkk";
+        String[] splitAbc = abc.split("");
+        String abcFinal = "";
+        for (int i = 0; i < splitAbc.length; i++) {
+            for (int j = i + 1; j < splitAbc.length; j++) {
+                if (splitAbc[i].equals(splitAbc[j])) {
+                    splitAbc[j] = "";
+                    abcFinal = abcFinal + splitAbc[i];
+
+                }
+            }
+        }
+        System.out.println(abcFinal);
     }
 }
